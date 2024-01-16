@@ -41,5 +41,6 @@ class UserManager:
 
     @staticmethod
     async def change_role(role: RoleType, user_id):
-        await database.execute(user.update().where(user.c.id == user_id).values(role=role))
-
+        await database.execute(
+            user.update().where(user.c.id == user_id).values(role=role)
+        )

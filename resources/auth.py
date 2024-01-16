@@ -16,5 +16,3 @@ async def register(user_data: UserRegisterIn):
 async def login(user_data: UserLoginIn):
     token, role = await UserManager.login(user_data.dict())
     return {"token": token, "role": role}
-
-
